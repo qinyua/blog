@@ -1,0 +1,165 @@
+---
+layout: post
+title: HTNL5的学习笔记
+date:  2020-02-29 22:26:00 +0900
+description: HTNL5的学习笔记
+img: post-4.jpg # Add image post (optional)
+tags: [Html5]
+author: # Add name author (optional)
+Html5: true
+---
+
+{{site.label1}} <a href="https://qinyua.github.io/" target="\_blank">James Qin</a> {{site.label2}}
+
+HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的。
+
+HTML 段落（paragraph）是通过 <p> 标签进行定义的。
+
+HTML 链接是通过 <a> 标签anchor进行定义的。<a name="C4"><a href="#C4">可以实现文章内跳转H5不支持，用专门anchor。Taget属性_blank _parent _self _top
+
+图片通过<img src="w3school.jpg" width="104" height="142" />来实现
+
+注释通过<!-- This is a comment -->来实现
+
+<abbr title="People's Republic of China">PRC</abbr>定义个缩写，可以看提示
+
+<address></>标签定义了文档的联系方式及地址
+
+文本P内部格式化：[](https://www.w3school.com.cn/tags/tag_font_style.asp)粗体，[](https://www.w3school.com.cn/tags/tag_font_style.asp)大字体，[](https://www.w3school.com.cn/tags/tag_phrase_elements.asp)着重字体[](https://www.w3school.com.cn/tags/tag_font_style.asp)斜体，[](https://www.w3school.com.cn/tags/tag_font_style.asp)小字体，[](https://www.w3school.com.cn/tags/tag_phrase_elements.asp)加重语气[](https://www.w3school.com.cn/tags/tag_sup.asp)下标字，<sup> 上标字，[](https://www.w3school.com.cn/tags/tag_ins.asp)下横线，<del>删除字
+
+<bdo>定义文字的显示方向
+
+<blockquote>定义里面是一个长的引用
+
+<q>代表是一个短的引用，他会自动给文本加引号。
+
+<var>定义是一个数学公式变量
+
+ 
+
+<frame> HTML 框架是应许你在一个页面里显示多个hmtl页面文件，缺点不能打印整个页面，以及开发人员需要关注的页面更多。H5里已经删除该属性
+
+ 
+
+<link>定义资源引用 
+
+<div>定义文档大区域，div可以做float:left浮动布局。
+
+<span>定义小的区块，主要是元素内的区域。
+
+<hr /> 为创建水平线
+
+<br/>为创建一个回车空行
+
+ 
+
+<noscript>text</noscript>表示当浏览器不支持script时显示的内容
+
+ 
+
+ 代表内容为空格;  < 或 <代表是<号，因为在html里无法直接输出<>，
+
+\>代表大于号>,
+
+ 
+
+创建响应式布局是指能否根据设备的分辨率尺寸能否自动的调节尺寸和位置。主要是是使用div的float:浮动属性。或者直接使用bootstrap直接设计，他直接设计好了样式框架。
+
+ 
+
+背景颜色可以用bgcolor来表示 <body bgcolor="#000000">  <body bgcolor="rgb(0,0,0)">
+
+<body bgcolor="black"> 这三种表示颜色都可以。
+
+只有这16种颜色可以直接写名字，aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow。其他的都需要通过rbg(0,0,0)的方式或者”#0000FF”的16进制颜色值方式来访问
+
+也可以直接使用背景图片<body background="./clouds.gif">,现在都直接用CSS样式表实现
+
+/<img src="../picture.jpg">代表是当前文件夹的上一层文件夹，
+
+<img src="/picture.jpg">代表是当前站点根目录文件夹下，
+
+<img src="picture.jpg">代表是当前页面路径下，等同于 src="./picture.jpg"
+
+<img src="image/picture.jpg">代表是当前页面image文件下的路径内，尽量使用相对路径。
+
+ 
+
+<!DOCTYPE html> 是html5的申明方式，现在的主流。
+
+<head>头部标签里可以包含***\*、、、、 以及 <style>\****
+
+<base>放在头部主要用来定义页面的默认地址或者target,
+
+<base href="http://www.w3school.com.cn/images/" />   <base target="_blank" />
+
+ 
+
+Forms是可以创建表单，里面可以包含<input >,<select>,<option>,<button>,<testarea>
+
+<textarea name="Comment" rows="60" cols="20" style="background:red;">text</textarea>
+
+ 
+
+Forms是里面的内容都添加name的属性主要是为了提交时能够识别是那个id名称，同时只有有name这个属性才可以被submit到服务器，不然不会提交。novalidate 是设置form在提交是不验证表单是否正确。
+
+Forms里每个元素都有value值，代表当input的submit提交时会将每个元素的name=value值传送到server中。
+
+每个input还有的其他属性有，size,disable,maxlength ,pattern属性是格式，
+
+placeholder="First name"是占位符。required属性是代表此输入是否必须。
+
+ 
+
+<input type="image" src=”” alt="Submit" width="48" height="48">类型也可以是图片
+
+<form action="action_page.php" method="GET"> forms里的action是用来写需要连接的地址，
+
+Form的其他属性 accept-charset="UTF-8"  ectype="application/x-www-form-urlencoded"
+
+Form的name设置好可以对于 DOM 使用：document.forms.name
+
+ 
+
+<fieldset><legend>等方式创建一个组合的表单form，可以显示表单名称。
+
+ 
+
+Html5里定义了一些新的标签tag如,header, section, footer, aside, nav, main, article, figure {display: block; }
+
+ 
+
+<canvas id="myCanvas" width="200" height="100"></canvas>是创建一画布，
+
+可以用javascript的方式进行画画，var c=document.getElementById("myCanvas");var cxt = c.getContext("2d"); cxt.fillStyle="#FF0000"; cxt.fillRect(0,0,150,75); 画长方形
+
+cxt.moveTo()  cxt.lineTo() cxt.stroke() 画线 cxt.arc()  cxt.fill()  画圆弧线或圆，
+
+var grd=cxt.createLinearGradient(0,0,175,50); grd.addColorStop(0,"#FF0000");
+
+grd.addColorStop(1,"#00FF00"); 创建渐变颜色 createRadialGradient()环形渐变颜色
+
+img=new Image()  img.src="flower.png"  cxt.drawImage(img,0,0); 画图
+
+[fillText()](https://www.w3school.com.cn/tags/canvas_filltext.asp)，添加文字，[strokeText()](https://www.w3school.com.cn/tags/canvas_stroketext.asp)显示文字，
+
+Cxt.translate是重新定义坐标轴点，tx.scale(2,2)缩放图像，[rotate()](https://www.w3school.com.cn/tags/canvas_rotate.asp)是旋转图像，
+
+可以设置填充颜色，线颜色，可以画矩形，路径画图，起始路径，结束路径，
+
+HTML5支持内联 SVG，叫可伸缩矢量图(Scalable Vector Graphics)，优势是在任何分辨率下都可以清晰的打印。可伸缩，可压缩。使用XML文件定义图片来描述文件。
+
+HTML5新增了显示地理位置的API, 拖放（Drag 和 Drop）的拖放功能，支持本地存储，效果要优于cookie, 
+
+ 
+
+还支持cache manifest 缓存文件，支持离线浏览，减少服务器负荷以及加载速度更快。
+
+HTML5 Web Workers是运行在后台的JS文件，不影响页面性能；
+
+HTML5还支持Server-Sent 事件SSE，允许网页自动从服务器获得更新
+
+
+
+
+

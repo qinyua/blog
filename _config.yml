@@ -96,16 +96,16 @@ links1:
     url:          /blog/myblog/Python
     type:         Python
     external:     false
-  - name:         HTML5
-    url:          /blog/myblog/HTML5
-    type:         HTML5
+  - name:         Html5
+    url:          /blog/myblog/Html5
+    type:         Html5
     external:     false
 
 blog_1:    recent
 blog_2:    essays
 blog_3:    jekyll
 blog_4:    Python
-blog_5:    HTML5
+blog_5:    Html5
 
 
 permalink: /:year-:month-:day/:title.html
