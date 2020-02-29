@@ -20,7 +20,7 @@ HTML 链接是通过 <a> 标签anchor进行定义的。<a name="C4"><a href="#C4
 注释通过<!-- This is a comment -->来实现
 
 
-文本P内部格式化：[](https://www.w3school.com.cn/tags/tag_font_style.asp)粗体，[](https://www.w3school.com.cn/tags/tag_font_style.asp)大字体，[](https://www.w3school.com.cn/tags/tag_phrase_elements.asp)着重字体[](https://www.w3school.com.cn/tags/tag_font_style.asp)斜体，[](https://www.w3school.com.cn/tags/tag_font_style.asp)小字体，[](https://www.w3school.com.cn/tags/tag_phrase_elements.asp)加重语气[](https://www.w3school.com.cn/tags/tag_sup.asp)下标字，<sup> 上标字，[](https://www.w3school.com.cn/tags/tag_ins.asp)下横线，<del>删除字
+文本P内部格式化：
 
 <bdo>定义文字的显示方向
 
@@ -59,38 +59,10 @@ HTML 链接是通过 <a> 标签anchor进行定义的。<a name="C4"><a href="#C4
 
 也可以直接使用背景图片<body background="./clouds.gif">,现在都直接用CSS样式表实现
 
-```HTML
-<abbr title="People's Republic of China">PRC</abbr>定义个缩写，可以看提示
-
-<address></>标签定义了文档的联系方式及地址
-    
-<hr /> 为创建水平线
-    
-\>代表大于号>,
-
-<noscript>text</noscript>表示当浏览器不支持script时显示的内容
-
-图片通过<img src="w3school.jpg" width="104" height="142" />来实现
-
-<img src="../picture.jpg">代表是当前文件夹的上一层文件夹，
-
-<img src="/picture.jpg">代表是当前站点根目录文件夹下，
-
-<img src="picture.jpg">代表是当前页面路径下，等同于 src="./picture.jpg"
-
-<img src="image/picture.jpg">代表是当前页面image文件下的路径内，尽量使用相对路径。
-
-<!DOCTYPE html> 是html5的申明方式，现在的主流。
-<head>头部标签里可以包含***\*、、、、 以及 <style>\****
-<base>放在头部主要用来定义页面的默认地址或者target,
-<base href="http://www.w3school.com.cn/images/" />   <base target="_blank" />
-```
 
 Forms是可以创建表单，里面可以包含<input >,<select>,<option>,<button>,<testarea>
 
-```HTML
-<textarea name="Comment" rows="60" cols="20" style="background:red;">text</textarea>
-```
+
 
 Forms是里面的内容都添加name的属性主要是为了提交时能够识别是那个id名称，同时只有有name这个属性才可以被submit到服务器，不然不会提交。novalidate 是设置form在提交是不验证表单是否正确。
 
@@ -119,11 +91,6 @@ Form的name设置好可以对于 DOM 使用：document.forms.name
 Html5里定义了一些新的标签tag如,header, section, footer, aside, nav, main, article, figure {display: block; }
 
  
-
-```HTML
-<canvas id="myCanvas" width="200" height="100"></canvas>是创建一画布，
-```
-
 可以用javascript的方式进行画画，var c=document.getElementById("myCanvas");var cxt = c.getContext("2d"); cxt.fillStyle="#FF0000"; cxt.fillRect(0,0,150,75); 画长方形
 
 cxt.moveTo()  cxt.lineTo() cxt.stroke() 画线 cxt.arc()  cxt.fill()  画圆弧线或圆，
@@ -134,9 +101,9 @@ grd.addColorStop(1,"#00FF00"); 创建渐变颜色 createRadialGradient()环形�
 
 img=new Image()  img.src="flower.png"  cxt.drawImage(img,0,0); 画图
 
-[fillText()](https://www.w3school.com.cn/tags/canvas_filltext.asp)，添加文字，[strokeText()](https://www.w3school.com.cn/tags/canvas_stroketext.asp)显示文字，
+添加文字，显示文字，
 
-Cxt.translate是重新定义坐标轴点，tx.scale(2,2)缩放图像，[rotate()](https://www.w3school.com.cn/tags/canvas_rotate.asp)是旋转图像，
+Cxt.translate是重新定义坐标轴点，tx.scale(2,2)缩放图像，
 
 可以设置填充颜色，线颜色，可以画矩形，路径画图，起始路径，结束路径，
 
