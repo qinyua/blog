@@ -1,0 +1,54 @@
+---
+layout: post
+title: jekyll本地化部署遇到的坑
+date:  2020-02-29 14:54:00 +0900
+description: jekyll本地化部署遇到的坑
+img: post-3.jpg # Add image post (optional)
+tags: [Jekyll]
+author: # Add name author (optional)
+jekyll: true
+---
+{{site.label1}} <a href="https://qinyua.github.io/" target="\_blank">James Qin</a> {{site.label2}}
+
+## 初衷
+
+本着对github博客的执着，就想着用jekyll的方式想部署一个博客，然后在github找到大神的作品，然后fork到自己的帐号里，但是不会玩啊。只能看到大神发的两篇指导文章。然后慢慢的查了资料，发现jekyll还是很强大啊，可以直接上传md文件或者.markdown格式的文件，就可以直接生成博客内容。
+
+然后再也尝试着上传了两篇自己做的md文件，然后再根据原来的YAML文件格式给自己的md文件也新增了上述内容，发现奇迹 发生了，我的两个文章就真的出现在了blog的主页上了。然后点击进去就能看到自己写的内容。
+
+但是问题就是每次往github上上传速度比较慢，更新慢，所以想到了本地化部署。
+
+## 本地部署
+
+首先想到了在ubuntu里系统了安装，但是尝试了好半天连个ruby都没有安装程序，最主要是RVM包安装都报错，果断放弃。还是尝试下windows的系统吧。然后去官网下载最新的ruby+devkit开发包。然后想着在windows XP里安装下，发现不支持。最后还是选择了一个高级系统。windows server 2016.这下没毛病了吧。
+
+安装网上说的教程安装完毕后发现可以跑随软件自带的minima的主题blog。想跑github上的怎么尝试都不行。最后根据提示发现是没有安装jekyll-paginate和jekyll-sitemap。
+
+然后根据网上提示输入命令：
+
+```ruby
+gem install jekyll-paginate 
+gem install jekyll-sitemap
+```
+
+安装完成后发现他还是仍然提示，我连重启大招都想到了。发现还是仍然存在这个问题。
+
+最后根据网上的资料发现了问题所在。只安装是没有用，还需要在Gemfile里将这两个文件给包含进去，他才会执行。如下：
+
+```ruby
+gem 'jekyll-paginate'
+gem 'jekyll-sitemap'
+```
+
+## 结果
+
+最终在添加完上述的两个依赖包后，再次执行命令发现终于可以运行了。
+
+在Dos的环境下继续执行命令发现`jekyll serve`终于提示运行正常了。
+
+```ruby
+ Auto-regeneration: enabled for 'C:/Users/Administrator/blog'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+
