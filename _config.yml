@@ -23,7 +23,7 @@ instagram: # Add your Instagram handle
 pinterest: # Add your Pinterest handle
 
 #修改成你自己的
-email:
+email: qinyu1@126.com
 phone:
 github:
 jianshu:
@@ -79,7 +79,6 @@ links:
 label1: <span style="font-size:12px">Publish by
 label2:  </span>
 
-
 links1:
   - name:         所有
     url:          /blog
@@ -93,11 +92,20 @@ links1:
     url:          /blog/myblog/jekyll
     type:         jekyll
     external:     false
+  - name:         Python
+    url:          /blog/myblog/Python
+    type:         Python
+    external:     false
+  - name:         HTML5
+    url:          /blog/myblog/HTML5
+    type:         HTML5
+    external:     false
 
 blog_1:    recent
 blog_2:    essays
 blog_3:    jekyll
-
+blog_4:    Python
+blog_5:    HTML5
 
 
 permalink: /:year-:month-:day/:title.html
