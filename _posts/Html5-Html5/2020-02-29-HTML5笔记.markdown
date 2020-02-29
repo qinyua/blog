@@ -1,6 +1,6 @@
----
+﻿---
 layout: post
-title: HTNL5的学习笔记
+title: HTML5的学习笔记
 date:  2020-02-29 22:26:00 +0900
 description: HTNL5的学习笔记
 img: post-4.jpg # Add image post (optional)
