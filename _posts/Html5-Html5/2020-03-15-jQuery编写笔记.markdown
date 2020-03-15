@@ -1,0 +1,83 @@
+---
+layout: post
+title: jQuery学习笔记
+date:  2020-03-15 16:00:00 +0900
+description: jQuery学习笔记
+img: post-5.jpg # Add image post (optional)
+tags: [Html5]
+author: # Add name author (optional)
+Html5: true
+---
+
+{{site.label1}} <a href="https://qinyua.github.io/" target="\_blank">James Qin</a> {{site.label2}}
+
+# jQuery的入口函数
+
+jQuery必须要在文档加载完成后才可以执行。当然写文档执行完成可以有以下几种方式：
+
+```javascript
+$(document).ready(function({
+//write code
+}))
+```
+
+1. 直接用上图的方式
+
+2. 由于$符号是jQuery里的特殊符号，代替的就是jQuery的意思，所以可以用jQuery代替$程序一样是可以执行的，如下：
+
+   ```javascript
+   jQuery(document).ready(function({
+   //write code
+   }))
+   ```
+
+3. 第三种方式当然就是可以用匿名函数的方式来书写也是没有问题的。如下：
+
+   ```javascript
+   $(function({
+   //write code
+   }))
+   ```
+
+4. 第四种当然就是匿名函数有jQuery来表示了：
+
+   ```javascript
+   jQuery(function({
+   //write code
+   }))
+   ```
+
+   
+
+# 下面就是我具体程序的例子。
+
+## talk is cheap,show me the code!
+
+```html
+<p id="csvobj"></p>
+
+<script>
+//jQuery的操作时可以直接写$符号代替jQuery，当然也可以直接写，都是可以实现一样的目的。
+//入口函数可以直接写$(document).ready(function(){};)来处理，也可以写匿名函数$(function(){})
+//当然都可以将$符号直接换成jQuery也是没有问题的。
+$(document).ready(
+function(){
+$('#csvobj').text("qweqwe");
+}
+)
+$(function(){
+$('#csvobj').text(function(i,c){
+return "neirong"+i+c;
+});
+})
+jQuery(function(){
+alert($('#csvobj').css('color'));
+$('#csvobj').css('color',"red");
+jQuery('#csvobj').css({'font-size':"2em",'font-weight':"bold"});
+}
+)
+</script>
+```
+
+
+
