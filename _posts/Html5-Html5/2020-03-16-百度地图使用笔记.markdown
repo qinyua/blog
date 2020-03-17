@@ -1,0 +1,23 @@
+---
+layout: post
+title: 百度地图javascript使用笔记
+date:  2020-03-16 21:00:00 +0900
+description: 百度地图javascript使用笔记
+img: post-6.jpg # Add image post (optional)
+tags: [Html5]
+author: # Add name author (optional)
+Html5: true
+---
+
+{{site.label1}} <a href="https://qinyua.github.io/" target="\_blank">James Qin</a> {{site.label2}}
+
+## 百度地图JS使用笔记
+
+## 经度longitude
+
+一般是指球面的横坐标，在地球上以本初子午线作为经度0°，然后子午线往东作为东经E,子午线往西做为西经W,东经180°和西经180°是重合的，经度longtitude的计算是以当前位置与标准经度0°的平面夹角作为经度值。格林尼次天文台是目前的标准的经度0°，UTC时间也是指的格林尼治时间。也就是经度0度的时间。每15个经度相差一个小时，所以东半球和西半球都分别被划分为12个时区。中国北京是在东八区。
+
+## 维度 latitude
+
+一般是指球面的纵坐标，计算是以球面的当前位置与球面中心点之间的线与赤道维度之间的夹角就是当前位置的维度值，然后以赤道为界可以分为北纬和南纬，每个维度分别为90°。所以北极点就是北纬90°，南极点就是南纬90°。
+
